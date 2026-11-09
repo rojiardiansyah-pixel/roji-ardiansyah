@@ -81,7 +81,20 @@
 .reel-time{color:#02DC4A;font-weight:800;font-size:12px;white-space:nowrap}
 .h1-footer__widget-author-icon img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid #029E40}
 .h1-footer__widget-author-icon-text h6{margin:6px 0 2px}
-/* === Galeri potret === */
+
+        /* === Dokumentasi Foto Pilihan (dari Drive) === */
+        .roji-drive__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+        .roji-drive__item{position:relative;overflow:hidden;border-radius:14px;border:1px solid #1E2B24;background:#0D0D0D}
+        .roji-drive__item a{display:block}
+        .roji-drive__item img{width:100%;height:240px;object-fit:cover;display:block;transition:transform .35s ease,filter .35s ease}
+        .roji-drive__item:hover img{transform:scale(1.04);filter:brightness(.78)}
+        .roji-drive__cap{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;background:linear-gradient(180deg,rgba(13,13,13,0) 0%,rgba(1,38,35,.92) 100%)}
+        .roji-drive__tag{display:inline-block;font-size:10px;letter-spacing:2px;color:#02DC4A;font-weight:800;text-transform:uppercase;margin-bottom:4px}
+        .roji-drive__title{color:#F5F1E6;font-size:14px;line-height:1.35;margin:0;font-weight:700}
+        @media(max-width:991px){.roji-drive__grid{grid-template-columns:repeat(2,1fr)}.roji-drive__item img{height:200px}}
+        @media(max-width:575px){.roji-drive__grid{grid-template-columns:1fr}.roji-drive__item img{height:220px}}
+
+        /* === Galeri potret === */
 .h1-about__gallery-cap{display:flex;align-items:center;gap:16px;font-size:11px;letter-spacing:3px;color:#02DC4A;text-transform:uppercase;margin:0 0 14px;font-weight:800}
 .h1-about__gallery-cap::after{content:"";flex:1;height:1px;background:#1E2B24}
 .h1-about__gallery{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(150px,1fr);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
@@ -587,6 +600,103 @@
                                     </span>
                                     <i class="tp-btn-circle-dot "></i>
                                 </a>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <!-- start dokumentasi foto pilihan (dari Google Drive) -->
+                    <section id="dokumentasi" class="heading-bg section-space-bottom">
+                        <div class="container custom-container">
+                            <div class="d-flex justify-content-between align-items-end flex-wrap gap-4 mb-2">
+                                <div>
+                                    <span class="h1-reel__kicker">DOKUMENTASI & KLIEN</span>
+                                    <h2 class="h1-reel__title">Portofolio Foto Pilihan</h2>
+                                </div>
+                                <p class="h1-reel__desc">Cuplikan dokumentasi event pemerintah, acara komunitas, dan company profile — bukti kerja nyata di lapangan. Klik foto untuk memperbesar.</p>
+                            </div>
+                            <div class="roji-drive__grid">
+                                <div class="roji-drive__item">
+                                    <a class="popup-image" href="assets/imgs/drive-portfolio/gubsu.jpg" title="Gubsu Cup Edy Rahmayadi">
+                                        <img src="assets/imgs/drive-portfolio/gubsu.jpg" alt="Gubsu Cup Edy Rahmayadi" loading="lazy">
+                                        <div class="roji-drive__cap">
+                                            <span class="roji-drive__tag">Event Pemerintah · Selayang, Medan</span>
+                                            <p class="roji-drive__title">Gubsu Cup Edy Rahmayadi</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="roji-drive__item">
+                                    <a class="popup-image" href="assets/imgs/drive-portfolio/bpsdm.jpg" title="BPSDM Sumut — PKN DI Yogyakarta">
+                                        <img src="assets/imgs/drive-portfolio/bpsdm.jpg" alt="BPSDM Sumut — PKN DI Yogyakarta" loading="lazy">
+                                        <div class="roji-drive__cap">
+                                            <span class="roji-drive__tag">Dokumentasi Program Pemerintah · 2023</span>
+                                            <p class="roji-drive__title">BPSDM Sumut — PKN DI Yogyakarta</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="roji-drive__item">
+                                    <a class="popup-image" href="assets/imgs/drive-portfolio/jogja.jpg" title="Jogja Bike Rendezvous 2022 — Shaggydog">
+                                        <img src="assets/imgs/drive-portfolio/jogja.jpg" alt="Jogja Bike Rendezvous 2022 — Shaggydog" loading="lazy">
+                                        <div class="roji-drive__cap">
+                                            <span class="roji-drive__tag">Event Musik & Komunitas</span>
+                                            <p class="roji-drive__title">Jogja Bike Rendezvous 2022 — Shaggydog</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="roji-drive__item">
+                                    <a class="popup-image" href="assets/imgs/drive-portfolio/haul.jpg" title="Haul ke-2 Alm. Bapak H. Anif bin Gulrang Shah">
+                                        <img src="assets/imgs/drive-portfolio/haul.jpg" alt="Haul ke-2 Alm. Bapak H. Anif bin Gulrang Shah" loading="lazy">
+                                        <div class="roji-drive__cap">
+                                            <span class="roji-drive__tag">Dokumentasi Acara Keagamaan</span>
+                                            <p class="roji-drive__title">Haul ke-2 Alm. Bapak H. Anif bin Gulrang Shah</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="roji-drive__item">
+                                    <a class="popup-image" href="assets/imgs/drive-portfolio/musda.jpg" title="Musda & Muscab HDCI Medan Sumut 2022">
+                                        <img src="assets/imgs/drive-portfolio/musda.jpg" alt="Musda & Muscab HDCI Medan Sumut 2022" loading="lazy">
+                                        <div class="roji-drive__cap">
+                                            <span class="roji-drive__tag">Event Organisasi</span>
+                                            <p class="roji-drive__title">Musda & Muscab HDCI Medan Sumut 2022</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="roji-drive__item">
+                                    <a class="popup-image" href="assets/imgs/drive-portfolio/ala.jpg" title="Ala Ayuning Dewasa">
+                                        <img src="assets/imgs/drive-portfolio/ala.jpg" alt="Ala Ayuning Dewasa" loading="lazy">
+                                        <div class="roji-drive__cap">
+                                            <span class="roji-drive__tag">Fotografi Budaya & Editorial · Bali</span>
+                                            <p class="roji-drive__title">Ala Ayuning Dewasa</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="roji-drive__item">
+                                    <a class="popup-image" href="assets/imgs/drive-portfolio/bs1.jpg" title="Company Profile — Produksi & Operasional">
+                                        <img src="assets/imgs/drive-portfolio/bs1.jpg" alt="Company Profile — Produksi & Operasional" loading="lazy">
+                                        <div class="roji-drive__cap">
+                                            <span class="roji-drive__tag">Fotografi Komersial / Company Profile</span>
+                                            <p class="roji-drive__title">Company Profile — Produksi & Operasional</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="roji-drive__item">
+                                    <a class="popup-image" href="assets/imgs/drive-portfolio/photo02.jpg" title="Company Profile — Tim & Brand">
+                                        <img src="assets/imgs/drive-portfolio/photo02.jpg" alt="Company Profile — Tim & Brand" loading="lazy">
+                                        <div class="roji-drive__cap">
+                                            <span class="roji-drive__tag">Fotografi Komersial / Company Profile</span>
+                                            <p class="roji-drive__title">Company Profile — Tim & Brand</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="roji-drive__item">
+                                    <a class="popup-image" href="assets/imgs/drive-portfolio/untitled.jpg" title="Company Profile — Visual Branding">
+                                        <img src="assets/imgs/drive-portfolio/untitled.jpg" alt="Company Profile — Visual Branding" loading="lazy">
+                                        <div class="roji-drive__cap">
+                                            <span class="roji-drive__tag">Fotografi Komersial / Company Profile</span>
+                                            <p class="roji-drive__title">Company Profile — Visual Branding</p>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </section>
