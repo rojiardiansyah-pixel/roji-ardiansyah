@@ -79,6 +79,16 @@
 .reel-name{display:block;color:#F5F1E6;font-size:13.5px;line-height:1.35;font-weight:700}
 .reel-kind{display:block;color:#93A79B;font-size:11px;margin-top:4px}
 .reel-time{color:#02DC4A;font-weight:800;font-size:12px;white-space:nowrap}
+.h1-footer__widget-author-icon img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid #029E40}
+.h1-footer__widget-author-icon-text h6{margin:6px 0 2px}
+/* === Galeri potret === */
+.h1-about__gallery-cap{display:flex;align-items:center;gap:16px;font-size:11px;letter-spacing:3px;color:#02DC4A;text-transform:uppercase;margin:0 0 14px;font-weight:800}
+.h1-about__gallery-cap::after{content:"";flex:1;height:1px;background:#1E2B24}
+.h1-about__gallery{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(150px,1fr);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+.h1-about__gallery img{width:100%;height:140px;object-fit:cover;border-radius:14px;border:1px solid #1E2B24;scroll-snap-align:start}
+.h1-about__gallery a{transition:transform .2s}
+.h1-about__gallery a:hover{transform:translateY(-4px)}
+@media(min-width:992px){.h1-about__gallery{grid-auto-flow:unset;grid-template-columns:repeat(5,1fr);overflow:visible}.h1-about__gallery img{height:170px}}
 </style>
 </head>
 
@@ -241,7 +251,7 @@
                                                     <div class="half-circle-banner clip-sm "></div>
                                                 </div>
                                                 <div class="h1-banner__author-icon">
-                                                    <img src="./assets/imgs/footer/h1-footer-icon-1.png"
+                                                    <img src="./assets/imgs/footer/profile-face.jpg"
                                                         alt="icon not found">
                                                 </div>
                                                 <h2>Video Editor · Content Creator · Drone Pilot</h2>
@@ -256,7 +266,7 @@
                                     </div>
                                     <div class="col-xl-6 col-md-6 mb-5 mb-xl-0">
                                         <div class="h1-banner__content-thumb br-20 h-100 fix p-relative" data-tilt data-tilt-max="10" data-tilt-speed="450" data-tilt-perspective="1100">
-                                            <img src="./assets/imgs/banner/banner-img-1.png" alt="img not found">
+                                            <img src="./assets/imgs/banner/banner-profile.jpg" alt="Roji Ardiansyah - Video Editor & Drone Pilot">
                                             <div class="h1-banner__content-thumb-circle br-20 p-absolute">
                                                 <div class="h1-banner__content-thumb-circle-icon">
                                                     <img src="./assets/imgs/banner/animation-arrow-icon.png"
@@ -378,7 +388,21 @@
                         </div>
                     </section>
 
-                    <!-- start brand slider  -->
+                    <!-- start galeri potret -->
+                    <div class="container custom-container">
+                        <div class="h1-about__gallery-wrap pt-40">
+                            <p class="h1-about__gallery-cap">Potret Roji — lifestyle, studio &amp; ekspedisi</p>
+                            <div class="h1-about__gallery">
+                                <a class="popup-image" href="assets/imgs/roji-gallery/roji-1.jpg" title="Potret di studio magenta"><img src="assets/imgs/roji-gallery/roji-1.jpg" alt="Roji - potret studio magenta"></a>
+                                <a class="popup-image" href="assets/imgs/roji-gallery/roji-2.jpg" title="Potret di ruangan bunga"><img src="assets/imgs/roji-gallery/roji-2.jpg" alt="Roji - potret di ruangan bunga"></a>
+                                <a class="popup-image" href="assets/imgs/roji-gallery/roji-3.jpg" title="Potret di dek kapal"><img src="assets/imgs/roji-gallery/roji-3.jpg" alt="Roji - di dek kapal"></a>
+                                <a class="popup-image" href="assets/imgs/roji-gallery/roji-4.jpg" title="Potret batik di studio"><img src="assets/imgs/roji-gallery/roji-4.jpg" alt="Roji - potret batik studio"></a>
+                                <a class="popup-image" href="assets/imgs/roji-gallery/roji-5.jpg" title="Potret di Danau Toba"><img src="assets/imgs/roji-gallery/roji-5.jpg" alt="Roji - di tebing Danau Toba"></a>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- start brand slider  -->
                     <section class="h1-brand__area heading-2-bg">
                         <div class="container-fluid">
                             <div class="swiper h1-brand__slider">
@@ -713,7 +737,7 @@
                             </div>
                             <div class="h1-about2__thumb br-10 overflow-hidden p-relative">
                                 <div class="h1-about p-relative">
-                                    <img src="./assets/imgs/images/about-bg.png" alt="img not found">
+                                    <img src="./assets/imgs/roji-florist.jpg" alt="Roji di ruangan bunga">
                                     <div class="  banner-4__capsol__content p-absolute" data-t-throwable-scene="true">
                                         <div class="banner-4__item__wrapper ">
 
@@ -888,7 +912,7 @@
                                 <div class="col-lg-3 col-md-6">
                                     <div class="h1-footer__widget body-dark-color h-100 d-flex flex-column">
                                         <div
-                                            class="h1-footer__widget-author d-flex align-items-center justify-content-start justify-content-xxl-end gap-3 p-relative">
+                                            class="h1-footer__widget-author d-flex flex-column align-items-center justify-content-center gap-2 p-relative text-center">
                                             <div
                                                 class="half-circle-clip-wrapper d-flex align-items-center justify-content-end position-absolute">
                                                 <div class="half-circle clip-bg d-none d-xxl-block "></div>
@@ -897,7 +921,7 @@
                                             </div>
 
                                             <div class="h1-footer__widget-author-icon">
-                                                <img src="./assets/imgs/footer/h1-footer-icon-1.png"
+                                                <img src="./assets/imgs/footer/profile-face.jpg"
                                                     alt="icon not found">
                                             </div>
                                             <div class="h1-footer__widget-author-icon-text">
