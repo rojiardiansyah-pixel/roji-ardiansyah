@@ -60,7 +60,26 @@
             opacity:0;transition:opacity .35s ease;
         }
         .h1-project__item-thumb:hover::after{opacity:1}
-    </style>
+    /* === Blok REEL (video) === */
+.h1-reel__kicker{display:inline-block;letter-spacing:3.5px;font-size:13px;font-weight:800;color:#02DC4A;text-transform:uppercase;margin-bottom:10px}
+.h1-reel__title{font-family:'Sofia',sans-serif;font-size:44px;line-height:1.1;color:#F5F1E6;margin:0}
+.h1-reel__desc{color:#93A79B;max-width:330px;line-height:1.6;margin:0}
+.h1-reel__layout{display:grid;grid-template-columns:1fr 360px;gap:26px;align-items:start;margin-top:36px}
+@media (max-width:991px){.h1-reel__layout{grid-template-columns:1fr}}
+.h1-reel__main{background:#0D0D0D;border:1px solid #1E2B24;border-radius:10px;overflow:hidden}
+#reelPlayer{display:block;width:100%;aspect-ratio:16/9;background:#000;max-height:62vh}
+.h1-reel__main-caption{padding:18px 22px;border-top:1px solid #1E2B24}
+#reelTitle{color:#F5F1E6;font-size:20px;margin:0 0 6px}
+#reelMeta{color:#93A79B;margin:0;font-size:13px}
+.h1-reel__list{display:flex;flex-direction:column;gap:12px}
+.reel-item{display:grid;grid-template-columns:118px 1fr auto;gap:14px;align-items:center;padding:10px;border-radius:16px;background:#0D0D0D;border:1px solid #1E2B24;text-align:left;width:100%;cursor:pointer;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.reel-item:hover{transform:translateX(-5px);border-color:#029E40}
+.reel-item.active{border-color:#02DC4A;box-shadow:0 0 0 1px #02DC4A,0 14px 34px rgba(2,220,74,.14)}
+.reel-item img{width:118px;height:74px;object-fit:cover;border-radius:10px;background:#012623}
+.reel-name{display:block;color:#F5F1E6;font-size:13.5px;line-height:1.35;font-weight:700}
+.reel-kind{display:block;color:#93A79B;font-size:11px;margin-top:4px}
+.reel-time{color:#02DC4A;font-weight:800;font-size:12px;white-space:nowrap}
+</style>
 </head>
 
 
@@ -395,7 +414,57 @@
                         </div>
                     </section>
 
-                    <!-- start project section  -->
+                    <!-- start reel/video section -->
+<section id="video" class="h1-reel__area section-space heading-2-bg">
+    <div class="container custom-container">
+        <div class="d-flex justify-content-between align-items-end flex-wrap gap-4">
+            <div>
+                <span class="h1-reel__kicker">REEL — TONTON LANGSUNG</span>
+                <h2 class="h1-reel__title">Video Favoritku</h2>
+            </div>
+            <p class="h1-reel__desc">Dari drone maritim sampai prewedding luar negeri. Klik thumbnail — videonya langsung ganti &amp; jalan di sini.</p>
+        </div>
+        <div class="h1-reel__layout">
+            <div class="h1-reel__main">
+                <video id="reelPlayer" controls playsinline preload="metadata"
+                       poster="assets/imgs/video/reel-1.jpg" src="assets/video/reel-1.mp4"></video>
+                <div class="h1-reel__main-caption">
+                    <h3 id="reelTitle">Maiden Voyage MV. Prosrich — PT KCA Global Maritim</h3>
+                    <p id="reelMeta">Drone Aerial Cinematic · Prosrich × PT KCA Global Maritim · 2024 · 2:15 menit</p>
+                </div>
+            </div>
+            <div class="h1-reel__list" id="reelList">
+<button class="reel-item active" data-src="assets/video/reel-1.mp4" data-poster="assets/imgs/video/reel-1.jpg" data-title="Maiden Voyage MV. Prosrich — PT KCA Global Maritim" data-meta="Drone Aerial Cinematic · Prosrich × PT KCA Global Maritim · 2024 · 2:15 menit">
+                        <img src="assets/imgs/video/reel-1.jpg" alt="Maiden Voyage MV. Prosrich — PT KCA Global Maritim (Drone)">
+                        <span><span class="reel-name">Maiden Voyage MV. Prosrich — PT KCA Global Maritim (Drone)</span><span class="reel-kind">Drone Cinematic</span></span>
+                        <span class="reel-time">2:15</span>
+                    </button>
+<button class="reel-item" data-src="assets/video/reel-2.mp4" data-poster="assets/imgs/video/reel-2.jpg" data-title="Rimmpro — Era & Dita (BTS & Result)" data-meta="Wedding Cinematic — behind the scene & final cut · Rimmpro · 1:20 menit">
+                        <img src="assets/imgs/video/reel-2.jpg" alt="Rimmpro — Era & Dita (BTS & Result Video)">
+                        <span><span class="reel-name">Rimmpro — Era & Dita (BTS & Result Video)</span><span class="reel-kind">Wedding</span></span>
+                        <span class="reel-time">1:20</span>
+                    </button>
+<button class="reel-item" data-src="assets/video/reel-3.mp4" data-poster="assets/imgs/video/reel-3.jpg" data-title="Ditayangkan di Trans7 & TransTV — Wedding Eki & Putri" data-meta="Thanksgiving video — diputar di Trans7 & TransTV · 0:41">
+                        <img src="assets/imgs/video/reel-3.jpg" alt="Trans7 & TransTV — Wedding Eki & Putri Kartika">
+                        <span><span class="reel-name">Trans7 & TransTV — Wedding Eki & Putri Kartika</span><span class="reel-kind">TV Feature</span></span>
+                        <span class="reel-time">0:41</span>
+                    </button>
+<button class="reel-item" data-src="assets/video/reel-4.mp4" data-poster="assets/imgs/video/reel-4.jpg" data-title="Sumatera Bike Week 06th 2024 — NIDJI Special Performance" data-meta="Sumatera Bike Week 06th 2024 · Pekanbaru · Special Performance NIDJI · 2:06">
+                        <img src="assets/imgs/video/reel-4.jpg" alt="Sumatera Bike Week 2024 — Special Performance NIDJI">
+                        <span><span class="reel-name">Sumatera Bike Week 2024 — Special Performance NIDJI</span><span class="reel-kind">Event</span></span>
+                        <span class="reel-time">2:06</span>
+                    </button>
+<button class="reel-item" data-src="assets/video/reel-5.mp4" data-poster="assets/imgs/video/reel-5.jpg" data-title="Prewedding Malaysia — @idelvink & @serenjitsingh" data-meta="Prewedding cinematic · Malaysia · 2:48">
+                        <img src="assets/imgs/video/reel-5.jpg" alt="Prewedding Malaysia — @idelvink & @serenjitsingh">
+                        <span><span class="reel-name">Prewedding Malaysia — @idelvink & @serenjitsingh</span><span class="reel-kind">Prewedding</span></span>
+                        <span class="reel-time">2:48</span>
+                    </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- start project section  -->
                     <section id="karya" class="h1-project__area section-space-bottom heading-2-bg overflow-hidden ">
                         <div class="h1-project__heading-text hero">
                             <h2 class="_split_text">Explore Some of My Projects <br>
@@ -927,6 +996,26 @@
         });
         if (window.VanillaTilt) { VanillaTilt.init(document.querySelectorAll('[data-tilt]')); }
     </script>
+
+<script>
+    /* === REEL: ganti video dari thumbnail === */
+    (function () {
+        var p = document.getElementById('reelPlayer'); if (!p) return;
+        var t = document.getElementById('reelTitle'), m = document.getElementById('reelMeta');
+        var list = document.getElementById('reelList');
+        list.addEventListener('click', function (e) {
+            var b = e.target.closest('.reel-item'); if (!b) return;
+            list.querySelectorAll('.reel-item').forEach(function (x) { x.classList.toggle('active', x === b); });
+            p.pause();
+            p.src = b.dataset.src;
+            p.poster = b.dataset.poster;
+            p.load();
+            t.textContent = b.dataset.title;
+            m.textContent = b.dataset.meta;
+            p.play().catch(function(){});
+        });
+    })();
+</script>
 </body>
 
 </html>
