@@ -1,0 +1,932 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Roji Ardiansyah — Video Editor, Content Creator & Drone Pilot</title>
+    <meta name="description" content="">
+    <meta name="author" content="soukhinkhan">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="assets/imgs/favicon-roji.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/animate.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome-pro.css">
+    <link rel="stylesheet" href="assets/css/vendor/spacing.css">
+    <link rel="stylesheet" href="assets/css/vendor/custom-font.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* === Penyesuaian Roji === */
+        .badge-tahun{
+            display:inline-block;
+            background:#017434;
+            color:#F5F1E6;
+            font-weight:800;
+            font-size:15px;
+            letter-spacing:1px;
+            padding:12px 22px;
+            border-radius:999px;
+            white-space:nowrap;
+        }
+        .h1-banner__header-icon p-absolute{position:absolute}
+        .h1-banner__header-icon{top:6px;right:0}
+        .brand-roji{
+            font-family:'Sofia',sans-serif;
+            font-size:34px;
+            font-weight:800;
+            color:#F5F1E6;
+            letter-spacing:1px;
+        }
+        .brand-dot{color:#02DC4A}
+        #beranda,#tentang,#karya,#layanan,#video,#kontak{scroll-margin-top:88px}
+        /* Ikon lime (PNG) -> geser hue ke hijau palet Roji */
+        .h1-about__item-thumb img,
+        .ball-icon img,
+        .h1-brand__content-thumb img{
+            filter:hue-rotate(62deg) brightness(.92) saturate(1.05);
+        }
+        /* Spotlight mengikuti cursor di kartu karya */
+        .h1-project__item-thumb{position:relative;overflow:hidden}
+        .h1-project__item-thumb::after{
+            content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+            background:radial-gradient(520px circle at var(--mx,50%) var(--my,50%), rgba(2,220,74,.30), transparent 45%);
+            opacity:0;transition:opacity .35s ease;
+        }
+        .h1-project__item-thumb:hover::after{opacity:1}
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- preloader start -->
+    <div id="preloader">
+        <div class="preloader-close">x</div>
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!-- preloader start -->
+
+    <!-- Backtotop start -->
+    <div class="backtotop-wrap cursor-pointer">
+        <svg class="backtotop-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Backtotop end -->
+
+    <!-- Offcanvas area start -->
+    <div class="fix">
+        <div class="offcanvas__area">
+            <div class="offcanvas__wrapper">
+                <div class="offcanvas__content">
+                    <div class="offcanvas__top d-flex justify-content-between align-items-center">
+                        <div class="offcanvas__logo">
+                            <a href="#beranda">
+                                <span class="brand-roji">roji<span class="brand-dot">.</span></span>
+                            </a>
+                        </div>
+                        <div class="offcanvas__close">
+                            <button class="offcanvas-close-icon animation--flip">
+                                <span class="offcanvas-m-lines">
+                                    <span class="offcanvas-m-line line--1"></span><span
+                                        class="offcanvas-m-line line--2"></span><span
+                                        class="offcanvas-m-line line--3"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mobile-menu fix"></div>
+                    <div class="offcanvas__social">
+                        <h3 class="offcanvas__title mb-20">Subscribe & Follow</h3>
+                        <ul>
+                            <li><a href="https://www.instagram.com/roji_ardiansyah/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.tiktok.com/@roji_ardiansyah" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/roji-ardiansyah-82189b233" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="mailto:roji.ardiansyah@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas__overlay"></div>
+    <div class="offcanvas__overlay-white"></div>
+    <!-- Offcanvas area start -->
+
+    <!-- Header area start -->
+    <header>
+        <div id="header-sticky" class="header bg-white">
+            <div class="container custom-container">
+                <div class="mega__menu-wrapper p-relative">
+                    <div class="header__main white-bg">
+                        <div class="header__left">
+                            <div class="header-1__logo">
+                                <a href="#beranda">
+                                    <div class="logo">
+                                        <span class="brand-roji">roji<span class="brand-dot">.</span></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header__middle ">
+                            <div class="mean__menu-wrapper d-none d-xl-block">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li class="active"><a href="#beranda">Beranda</a></li>
+                                            <li><a href="#tentang">Tentang</a></li>
+                                            <li><a href="#karya">Karya</a></li>
+                                            <li><a href="#layanan">Layanan</a></li>
+                                            <li><a href="#kontak">Kontak</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__right">
+                            <div class="header__action d-flex align-items-center">
+                                <div class="header__btn-wrap d-none d-sm-inline-flex">
+                                    <a href="#kontak" class="rr-btn">Let's Talk <i
+                                            class="fa-regular fa-arrow-right"></i></a>
+                                </div>
+                                <div class="header__hamburger ml-20 mr-10 d-xl-none">
+                                    <div class="sidebar__toggle">
+                                        <button class="bar-icon">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="popup-search-box">
+        <div class="box-inner-wrap d-flex align-items-center">
+            <form id="form" action="#" method="get" role="search">
+                <input id="popup-search" type="text" name="s" placeholder="Type keywords here...">
+            </form>
+            <div class="search-close"><i class="fa-sharp fa-regular fa-xmark"></i></div>
+        </div>
+    </div>
+    <!-- Header area end -->
+
+    <!-- Body main wrapper start -->
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <div class="white-margin-border">
+                <main>
+
+                    <!-- start banner section  -->
+                    <section id="beranda" class="h1-banner__area p-relative section-space  heading-bg">
+                        <div class="h1-banner-shape d-none d-xl-block">
+                            <img class="h1-banner-shape-1 p-absolute" src="assets/imgs/shapes/banner-shape1.png" alt="">
+                            <img class="h1-banner-shape-2 p-absolute" src="assets/imgs/shapes/banner-shape-2.png"
+                                alt="">
+                        </div>
+                        <div class="container custom-container">
+                            <div class="h1-banner__header p-relative section-space ">
+                                <h1>Video Editor <br>
+                                    & Aerial Drone Pilot</h1>
+                                <div class="h1-banner__header-icon p-absolute">
+                                    <span class="badge-tahun">7+ Tahun Pengalaman</span>
+                                </div>
+                            </div>
+                            <div class="h1-banner__content">
+                                <div class="row align-items-stretch custom-row">
+                                    <div class="col-xl-3 col-md-6 mb-5 mb-xl-0">
+                                        <div
+                                            class="h1-banner__author-wrapper position-relative br-20 fix m-0  custom-bg">
+                                            <div class=" h1-banner__author-shape ">
+                                                <div
+                                                    class="half-circle-banner-wrapper d-flex align-items-center justify-content-end position-absolute">
+                                                    <div class="half-circle-banner clip-bg "></div>
+                                                    <div class="half-circle-banner clip-md "></div>
+                                                    <div class="half-circle-banner clip-sm "></div>
+                                                </div>
+                                                <div class="h1-banner__author-icon">
+                                                    <img src="./assets/imgs/footer/h1-footer-icon-1.png"
+                                                        alt="icon not found">
+                                                </div>
+                                                <h2>Video Editor · Content Creator · Drone Pilot</h2>
+                                            </div>
+                                            <div class="h1-banner__author-text">
+                                                <h6><a href="#">Hi, saya Roji,</a></h6>
+                                                <p>Video editor & sinematografer dengan pengalaman 7+ tahun —
+                                                    dari video promosi brand furnitur premium hingga konten
+                                                    bilingual Mandarin–Indonesia. Percayakan visualmu kepadaku.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-md-6 mb-5 mb-xl-0">
+                                        <div class="h1-banner__content-thumb br-20 h-100 fix p-relative" data-tilt data-tilt-max="10" data-tilt-speed="450" data-tilt-perspective="1100">
+                                            <img src="./assets/imgs/banner/banner-img-1.png" alt="img not found">
+                                            <div class="h1-banner__content-thumb-circle br-20 p-absolute">
+                                                <div class="h1-banner__content-thumb-circle-icon">
+                                                    <img src="./assets/imgs/banner/animation-arrow-icon.png"
+                                                        alt="icon not found">
+                                                </div>
+                                                <img class="spin" src="./assets/imgs/banner/animation-img-1.png"
+                                                    alt="img not found ">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-3 col-md-6 mb-5 mb-xl-0">
+                                        <div class="h-100 br-20 fix d-flex flex-column gap-5 br-20 ">
+                                            <div
+                                                class="h1-banner__content-contact d-flex flex-column gap-5 br-20 custom-bg ">
+                                                <div class="text">
+                                                    <h6>Status:</h6>
+                                                    <p>Siap terima project freelance</p>
+                                                </div>
+                                                <div class="text">
+                                                    <h6>Location:</h6>
+                                                    <p>Jakarta, Indonesia — WIB (GMT +7)</p>
+                                                </div>
+                                                <div class="text">
+                                                    <h6>Email:</h6>
+                                                    <p>roji.ardiansyah@gmail.com</p>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="h1-banner__content-social custom-bg br-20 fix  d-flex flex-column justify-content-between ">
+                                                <h4>Temukan saya di</h4>
+                                                <div
+                                                    class="h1-banner__content-social-list d-flex align-items-center justify-content-end mt-5 mt-xl-0">
+                                                    <ul class="d-flex align-items-center justify-content-end">
+                                                        <li><a href="https://www.instagram.com/roji_ardiansyah/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                                        <li><a href="https://www.tiktok.com/@roji_ardiansyah" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                                                        <li><a href="https://www.linkedin.com/in/roji-ardiansyah-82189b233" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                                        <li><a href="mailto:roji.ardiansyah@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- start about section  -->
+                    <section
+                        id="tentang" class="h1-about__area   section-space-bottom-90 section-space-top heading-2-bg fade-wrapper">
+                        <div class="container custom-container">
+                            <div class="h1-about__heading-text">
+                                <h2 class="rr_title_anim">Hi, saya Roji — 7+ tahun bikin <span
+                                        class="ball-icon"><img src="assets/imgs/icon/h1-ball-icon.png"
+                                            alt="img not found"></span> video sinematik,
+                                    konten sosmed & penerbangan drone. Dari pelabuhan maritim sampai
+                                    prewedding — saya bantu brand tampil beda lewat visual yang <br>keren
+                                    & penuh cerita.</h2>
+                            </div>
+                            <div class="row justify-content-xl-center justify-content-start custom-row">
+                                <div class="col-xl-3 col-lg-6   col-sm-6 col-xs-6 p-0">
+                                    <div class="h1-about__item fade-top mb-30">
+                                        <div class="h1-about__item-content">
+                                            <div class="h1-about__item-thumb">
+                                                <img src="./assets/imgs/icon/about-icon-1.png" alt="img not found">
+                                            </div>
+                                            <div class="h1-about__item-text">
+                                                <h6><a href="#tentang">Video Editing</a></h6>
+                                                <p class="dec">Premiere Pro · After Effects · CapCut — hasil rapi,
+                                                    cepat, dan siap tayang di semua platform.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-6  col-sm-6 col-xs-6 p-0">
+                                    <div class="h1-about__item fade-top mb-30">
+                                        <div class="h1-about__item-content">
+                                            <div class="h1-about__item-thumb">
+                                                <img src="./assets/imgs/icon/about-icon-2.png" alt="img not found">
+                                            </div>
+                                            <div class="h1-about__item-text">
+                                                <h6><a href="#tentang">Aerial Drone Pilot</a></h6>
+                                                <p class="dec">Sudut udara sinematik dengan drone DJI — pelabuhan,
+                                                    kawasan industri, hingga prewedding dari atas.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-6  col-sm-6 col-xs-6 p-0">
+                                    <div class="h1-about__item fade-top  mb-30">
+                                        <div class="h1-about__item-content">
+                                            <div class="h1-about__item-thumb">
+                                                <img src="./assets/imgs/icon/about-icon-3.png" alt="img not found">
+                                            </div>
+                                            <div class="h1-about__item-text">
+                                                <h6><a href="#tentang">Konten Sosmed</a></h6>
+                                                <p class="dec">Bikin & kelola konten IG/TikTok yang menghibur,
+                                                    mengedukasi, dan menjual.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-6  col-sm-6 col-xs-6 p-0">
+                                    <div class="h1-about__item fade-top  mb-30">
+                                        <div class="h1-about__item-content">
+                                            <div class="h1-about__item-thumb">
+                                                <img src="./assets/imgs/icon/about-icon-4.png" alt="img not found">
+                                            </div>
+                                            <div class="h1-about__item-text">
+                                                <h6><a href="#tentang">Bilingual Mandarin–Indonesia</a></h6>
+                                                <p class="dec">Jembatan komunikasi & konten untuk brand lokal
+                                                    maupun internasional.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- start brand slider  -->
+                    <section class="h1-brand__area heading-2-bg">
+                        <div class="container-fluid">
+                            <div class="swiper h1-brand__slider">
+                                <div
+                                    class="swiper-wrapper smooth-slide-transtion d-flex align-items-center align-content-center ">
+                                    <div class="swiper-slide">
+                                        <div class="h1-brand__content">
+                                            <h2><span>7+ / </span>tahun pengalaman</h2>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="h1-brand__content-thumb  br-20">
+                                            <img src="./assets/imgs/brands/brands-icon1.png" alt="img not found">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="h1-brand__content">
+                                            <h2><span>11+ / </span>project karya tayang</h2>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="h1-brand__content">
+                                            <h2><span>10K+ / </span>pengikut IG & TikTok</h2>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide d-none">
+                                        <div class="h1-brand__content-thumb br-20">
+                                            <img src="./assets/imgs/brands/brands-icon1.png" alt="img not found">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- start project section  -->
+                    <section id="karya" class="h1-project__area section-space-bottom heading-2-bg overflow-hidden ">
+                        <div class="h1-project__heading-text hero">
+                            <h2 class="_split_text">Explore Some of My Projects <br>
+                                from 2018 to 2026</h2>
+                        </div>
+
+                        <div class="h1-project__wrapper bg-dark-color custom-border">
+                            <div class="container custom-container ">
+                                <div class="row custom-gutter mddle-border ">
+                                    <div class="col-md-6">
+                                        <div class="h1-project__item br-10 custom-margin ">
+                                            <div class="h1-project__item-thumb p-relative fade-anim" data-cursor-text='<div class="content">
+                                            <h3 class="title"><a href="https://drive.google.com/drive/folders/1TgB-kyoeexVvHYaMj0kHygk0cM63zjbp" target="_blank">SAVIN</a></h3>
+                                            <span class="meta">Brand Identity · Product Video</span>
+                                          </div>' data-cursor-text-portfolio>
+                                                <img src="./assets/imgs/project/project-img1.jpg" alt="img not found">
+                                                <div class="h1-project__item-content p-absolute">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="h1-project__item  br-10">
+                                            <div class="h1-project__item-thumb p-relative fade-anim" data-cursor-text='<div class="content">
+                                            <h3 class="title"><a href="https://drive.google.com/drive/folders/1TgB-kyoeexVvHYaMj0kHygk0cM63zjbp" target="_blank">Lip Cream Product</a></h3>
+                                            <span class="meta">Product Photography</span>
+                                          </div>' data-cursor-text-portfolio>
+                                                <img src="./assets/imgs/project/project-img2.jpg" alt="img not found">
+                                                <div class="h1-project__item-content p-absolute">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h1-project__wrapper bg-dark-color custom-border">
+                            <div class="container custom-container ">
+                                <div class="row custom-gutter mddle-border">
+                                    <div class="col-md-6">
+                                        <div class="h1-project__item br-10">
+                                            <div class="h1-project__item-thumb p-relative fade-anim" data-cursor-text='<div class="content">
+                                            <h3 class="title"><a href="https://drive.google.com/drive/folders/1TgB-kyoeexVvHYaMj0kHygk0cM63zjbp" target="_blank">Love in Motion</a></h3>
+                                            <span class="meta">Cinematic Video</span>
+                                          </div>' data-cursor-text-portfolio>
+                                                <img src="./assets/imgs/project/project-img3.jpg" alt="img not found">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="h1-project__item  br-10">
+                                            <div class="h1-project__item-thumb p-relative" data-cursor-text='<div class="content">
+                                            <h3 class="title"><a href="https://drive.google.com/drive/folders/1TgB-kyoeexVvHYaMj0kHygk0cM63zjbp" target="_blank">Pre-Wedding Malaysia</a></h3>
+                                            <span class="meta">Aerial & Ground Cinematic</span>
+                                          </div>' data-cursor-text-portfolio>
+                                                <img src="./assets/imgs/project/project-img4.jpg" alt="img not found">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h1-project__wrapper bg-dark-color custom-border">
+                            <div class="container custom-container">
+                                <div class="row custom-gutter mddle-border">
+                                    <div class="col-md-6">
+                                        <div class="h1-project__item br-10">
+                                            <div class="h1-project__item-thumb p-relative" data-cursor-text='<div class="content">
+                                            <h3 class="title"><a href="https://drive.google.com/drive/folders/1TgB-kyoeexVvHYaMj0kHygk0cM63zjbp" target="_blank">Drone — Port & Maritime</a></h3>
+                                            <span class="meta">Aerial Cinematic Video</span>
+                                          </div>' data-cursor-text-portfolio>
+                                                <img src="./assets/imgs/project/project-img5.jpg" alt="img not found">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="h1-project__item  br-10">
+                                            <div class="h1-project__item-thumb p-relative" data-cursor-text='<div class="content">
+                                            <h3 class="title"><a href="https://drive.google.com/drive/folders/1TgB-kyoeexVvHYaMj0kHygk0cM63zjbp" target="_blank">Restaurant Interior</a></h3>
+                                            <span class="meta">Interior Cinematic Video</span>
+                                          </div>' data-cursor-text-portfolio>
+                                                <img src="./assets/imgs/project/project-img6.jpg" alt="img not found">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap-1 d-flex justify-content-center mt-60">
+                            <div class="tp-portfolio-more tp-hover-btn-wrapper tp-btn-bounce-2">
+                                <a href="https://drive.google.com/drive/folders/1TgB-kyoeexVvHYaMj0kHygk0cM63zjbp" target="_blank"
+                                    class="tp-hover-btn tp-hover-btn-item tp-btn-circle-2 d-flex align-items-center justify-content-center flex-column">
+                                    <span class="tp-btn-circle-text-2">
+                                        Lihat Semua Karya
+                                    </span>
+                                    <i class="tp-btn-circle-dot "></i>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- start service section  -->
+                    <section id="layanan" class="h1-service__area section-space-bottom heading-bg ">
+                        <div class="container-fluid">
+                            <div class="swiper all-brand__slider  py-5">
+                                <div class="swiper-wrapper smooth-slide-transtion ">
+                                    <div class="swiper-slide">
+                                        <div class="h1-service__content pt-85 pb-35">
+                                            <h2>LAYANAN -</h2>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="h1-service__content pt-85 pb-35">
+                                            <h2><span>LAYANAN -</span></h2>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="h1-service__content pt-85 pb-35">
+                                            <h2>LAYANAN -</h2>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="h1-service__content pt-85 pb-35">
+                                            <h2><span>LAYANAN -</span></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="h1-service__item">
+                                <div class="h1-service__item-content h1-service__item-content-3">
+                                    <div class="h1-service__item-content-heading d-flex align-items-center gap-5">
+                                        <span>001</span>
+                                        <h2><a href="#">Videografi</a></h2>
+                                    </div>
+                                    <div class="h1-service__item-content-thumb br-10 overflow-hidden p-relative">
+                                        <img src="./assets/imgs/service/h1-service-img-1.jpg" alt="img not found">
+                                        <div class="mddle-text p-absolute">
+                                            <div class="swiper h1-service__slider">
+                                                <div class="swiper-wrapper smooth-slide-transtion">
+                                                    <div class="swiper-slide">
+                                                        <h6> / Video Promosi / Company Profile / Dokumentasi Acara / Video Promosi / Company Profile / Dokumentasi Acara </h6>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <h6> / Video Promosi / Company Profile / Dokumentasi Acara / Video Promosi / Company Profile / Dokumentasi Acara </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="h1-service__item-content-btn mt-4 mt-md-0">
+                                        <a href="#" class="h1-service__btn"> <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h1-service__item">
+                                <div class="h1-service__item-content ">
+                                    <div class="h1-service__item-content-heading d-flex align-items-center gap-5">
+                                        <span>002</span>
+                                        <h2><a href="#">Fotografi Produk</a></h2>
+                                    </div>
+                                    <div class="h1-service__item-content-thumb br-10 overflow-hidden p-relative">
+                                        <img src="./assets/imgs/service/h1-service-img-2.jpg" alt="img not found">
+                                        <div class="mddle-text p-absolute">
+                                            <div class="swiper h1-service__slider">
+                                                <div class="swiper-wrapper smooth-slide-transtion">
+                                                    <div class="swiper-slide">
+                                                        <h6> / Foto Produk / Indoor & Outdoor / Foto Katalog </h6>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <h6> / Foto Produk / Indoor & Outdoor / Foto Katalog</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="h1-service__item-content-btn mt-4 mt-md-0">
+                                        <a href="#" class="h1-service__btn"> <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h1-service__item">
+                                <div class="h1-service__item-content ">
+                                    <div class="h1-service__item-content-heading d-flex align-items-center gap-5">
+                                        <span>003</span>
+                                        <h2><a href="#">Aerial Drone</a></h2>
+                                    </div>
+                                    <div class="h1-service__item-content-thumb br-10 overflow-hidden p-relative">
+                                        <img src="./assets/imgs/service/h1-service-img-3.jpg" alt="img not found">
+                                        <div class="mddle-text p-absolute">
+                                            <div class="swiper h1-service__slider">
+                                                <div class="swiper-wrapper smooth-slide-transtion">
+                                                    <div class="swiper-slide">
+                                                        <h6> / Aerial Cinematic / Port & Maritime / DJI Drone / Aerial Cinematic / Port & Maritime / DJI Drone </h6>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <h6> / Aerial Cinematic / Port & Maritime / DJI Drone / Aerial Cinematic / Port & Maritime / DJI Drone </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="h1-service__item-content-btn mt-4 mt-md-0">
+                                        <a href="#" class="h1-service__btn"> <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h1-service__item">
+                                <div class="h1-service__item-content ">
+                                    <div class="h1-service__item-content-heading d-flex align-items-center gap-5">
+                                        <span>004</span>
+                                        <h2><a href="#">Editing & Konten Sosmed</a></h2>
+                                    </div>
+                                    <div class="h1-service__item-content-thumb br-10 overflow-hidden p-relative">
+                                        <img src="./assets/imgs/service/h1-service-img-4.jpg" alt="img not found">
+                                        <div class="mddle-text p-absolute">
+                                            <div class="swiper h1-service__slider">
+                                                <div class="swiper-wrapper smooth-slide-transtion">
+                                                    <div class="swiper-slide">
+                                                        <h6> / Reels & TikTok / Carousel & Thumbnail / Content Planning </h6>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <h6> / Reels & TikTok / Carousel & Thumbnail / Content Planning </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="h1-service__item-content-btn mt-4 mt-md-0">
+                                        <a href="#" class="h1-service__btn"> <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    
+
+                    <section class="h1-about2__area heading-bg section-space-top section-space-bottom-90">
+                        <div class="container custom-container px-4">
+                            <div class="h1-about2__heading">
+                                <h2 class="rr_title_anim">Software &amp; alat yang saya andalkan
+                                    setiap hari — siap ngedit, ngefly, dan ngepost</h2>
+                            </div>
+                            <div class="h1-about2__thumb br-10 overflow-hidden p-relative">
+                                <div class="h1-about p-relative">
+                                    <img src="./assets/imgs/images/about-bg.png" alt="img not found">
+                                    <div class="  banner-4__capsol__content p-absolute" data-t-throwable-scene="true">
+                                        <div class="banner-4__item__wrapper ">
+
+                                            <p data-t-throwable-el=""
+                                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(667.8px, 665.8px);">
+                                                <span class="banner-4__capsol__item" data-bg-color=" #012623"
+                                                    data-color="#fff"
+                                                    style="background-color: rgb(1, 38, 35); color: rgb(255, 255, 255); transform: translate(-50%, -50%) rotate(0rad);">Premiere Pro</span>
+                                            </p>
+                                            <p data-t-throwable-el=""
+                                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(876.1px, 665.9px);">
+                                                <span class="banner-4__capsol__item" data-bg-color="#02DC4A"
+                                                    data-color="#000"
+                                                    style="background-color: rgb(2, 220, 74); color: rgb(0, 0, 0); transform: translate(-50%, -50%) rotate(0rad);">After Effects</span>
+                                            </p>
+                                            <p data-t-throwable-el=""
+                                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(953.2px, 597.4px);">
+                                                <span class="banner-4__capsol__item" data-bg-color="#fff"
+                                                    data-color="#000"
+                                                    style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); transform: translate(-50%, -50%) rotate(0rad);">Photoshop</span>
+                                            </p>
+                                            <p data-t-throwable-el=""
+                                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(376.8px, 665.7px);">
+                                                <span class="banner-4__capsol__item" data-bg-color=" #012623"
+                                                    data-color="#fff"
+                                                    style="background-color: rgb(1, 38, 35); color: rgb(255, 255, 255); transform: translate(-50%, -50%) rotate(0rad);">Illustrator</span>
+                                            </p>
+                                            <p data-t-throwable-el=""
+                                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(1415.3px, 665.6px);">
+                                                <span class="banner-4__capsol__item" data-bg-color=" #012623"
+                                                    data-color="#fff"
+                                                    style="background-color: rgb(1, 38, 35); color: rgb(255, 255, 255); transform: translate(-50%, -50%) rotate(0rad);">Illustrator</span>
+                                            </p>
+                                            <p data-t-throwable-el=""
+                                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(505.2px, 597px);">
+                                                <span class="banner-4__capsol__item" data-bg-color="#02DC4A"
+                                                    data-color="#000"
+                                                    style="background-color: rgb(2, 220, 74); color: rgb(0, 0, 0); transform: translate(-50%, -50%) rotate(0rad);">Adobe Firefly</span>
+                                            </p>
+                                            <p data-t-throwable-el=""
+                                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(1192.1px, 665.6px);">
+                                                <span class="banner-4__capsol__item" data-bg-color="#fff"
+                                                    data-color="#000"
+                                                    style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); transform: translate(-50%, -50%) rotate(0rad);">CapCut</span>
+                                            </p>
+                                            <p data-t-throwable-el=""
+                                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(753.6px, 541px);">
+                                                <span class="banner-4__capsol__item" data-bg-color=" #012623"
+                                                    data-color="#fff"
+                                                    style="background-color: rgb(1, 38, 35); color: rgb(255, 255, 255); transform: translate(-50%, -50%) rotate(-1.57rad);">OBS Studio</span>
+                                            </p>
+                                            <p data-t-throwable-el=""
+                                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(655.2px, 533.6px);">
+                                                <span class="banner-4__capsol__item" data-bg-color=" #012623"
+                                                    data-color="#fff"
+                                                    style="background-color: rgb(1, 38, 35); color: rgb(255, 255, 255); transform: translate(-50%, -50%) rotate(-1.57rad);">Lightroom</span>
+                                            </p>
+                                            <p data-t-throwable-el=""
+                                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(1538px, 596.8px);">
+                                                <span class="banner-4__capsol__item" data-bg-color="#02DC4A"
+                                                    data-color="#000"
+                                                    style="background-color: rgb(2, 220, 74); color: rgb(0, 0, 0); transform: translate(-50%, -50%) rotate(0rad);">OBS Studio</span>
+                                            </p>
+                                            <p data-t-throwable-el=""
+                                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(488px, 528.2px);">
+                                                <span class="banner-4__capsol__item" data-bg-color="#fff"
+                                                    data-color="#000"
+                                                    style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); transform: translate(-50%, -50%) rotate(0rad);">Premiere Pro</span>
+                                            </p>
+                                            <p data-t-throwable-el=""
+                                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(1367.2px, 557px);">
+                                                <span class="banner-4__capsol__item" data-bg-color=" #012623"
+                                                    data-color="#fff"
+                                                    style="background-color: rgb(1, 38, 35); color: rgb(255, 255, 255); transform: translate(-50%, -50%) rotate(-0.51rad);">Illustrator</span>
+                                            </p>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="h1-about2__thumb-text br-20 p-absolute d-flex flex-column gap-4 gap-sm-5 justify-content-center">
+                                    <h6>Punya ide video &amp; foto<br>
+                                        yang mau diwujudkan?</h6>
+                                    <div class="h1-about2__thumb-text-btn ">
+                                        <a class="rr-btn" href="#">Hubungi Saya <i
+                                                class="fa-regular fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper h1-about2__slider mt-30">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="h1-about2__item br-10">
+                                            <img src="./assets/imgs/about2/h1-aboute-card-img-1.png"
+                                                alt="img not found">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="h1-about2__item br-10">
+                                            <img src="./assets/imgs/about2/h1-aboute-card-img-2.png"
+                                                alt="img not found">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="h1-about2__item br-10">
+                                            <img src="./assets/imgs/about2/h1-aboute-card-img-3.png"
+                                                alt="img not found">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="h1-about2__item br-10">
+                                            <img src="./assets/imgs/about2/h1-aboute-card-img-4.png"
+                                                alt="img not found">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="h1-about2__item br-10">
+                                            <img src="./assets/imgs/about2/h1-aboute-card-img-2.png"
+                                                alt="img not found">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="h1-about2__item br-10">
+                                            <img src="./assets/imgs/about2/h1-aboute-card-img-3.png"
+                                                alt="img not found">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    
+
+                    
+
+                </main>
+                <!-- Footer area start -->
+                <footer>
+                    <section id="kontak" class="h1-footer__area fade-wrapper"
+                        style="background-image: url('./assets/imgs/footer/footer-bg.png'); background-size: cover; background-position: center;">
+                        <div class="container-fluid h1-f-custom-padding">
+                            <div class="swiper all-brand__slider py-5">
+                                <div class="swiper-wrapper smooth-slide-transtion ">
+                                    <div class="swiper-slide">
+                                        <div class="h1-footer__content">
+                                            <h2>LET’s chat -</h2>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="h1-footer__content">
+                                            <h2><span>LET’s chat -</span></h2>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="h1-footer__content">
+                                            <h2>LET’s chat -</h2>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="h1-footer__content">
+                                            <h2><span>LET’s chat -</span></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container custom-container">
+                            <div class="row h1-footer-custom-gutter align-items-stretch">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="h1-footer__widget body-dark-color h-100 d-flex flex-column">
+                                        <div
+                                            class="h1-footer__widget-author d-flex align-items-center justify-content-start justify-content-xxl-end gap-3 p-relative">
+                                            <div
+                                                class="half-circle-clip-wrapper d-flex align-items-center justify-content-end position-absolute">
+                                                <div class="half-circle clip-bg d-none d-xxl-block "></div>
+                                                <div class="half-circle clip-md d-none d-xxl-block "></div>
+                                                <div class="half-circle clip-sm d-none d-xxl-block "></div>
+                                            </div>
+
+                                            <div class="h1-footer__widget-author-icon">
+                                                <img src="./assets/imgs/footer/h1-footer-icon-1.png"
+                                                    alt="icon not found">
+                                            </div>
+                                            <div class="h1-footer__widget-author-icon-text">
+                                                <h6><a href="#beranda">Hi, saya Roji,</a></h6>
+                                                <p>Video Editor &amp; Drone Pilot</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3  col-md-6 footer-custom-border ">
+                                    <div class="h1-footer__widget body-dark-color h-100 d-flex flex-column">
+                                        <div class="h1-footer__widget-link">
+                                            <p>INQUIRY</p>
+                                            <h5><a href="mailto:roji.ardiansyah@gmail.com">roji.ardiansyah@gmail.com</a></h5>
+                                            <h6><a href="https://www.instagram.com/roji_ardiansyah/" target="_blank">@roji_ardiansyah</a></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3  col-md-6 footer-custom-border ">
+                                    <div class="h1-footer__widget body-dark-color  h-100 d-flex flex-column">
+                                        <div class="h1-footer__widget-link">
+                                            <p>Location</p>
+                                            <h5><a href="#">Jakarta, Indonesia<br>WIB (GMT +7)</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3  col-md-6 footer-custom-border">
+                                    <div
+                                        class="h1-footer__widget body-dark-color rounded-end-5 h-100 d-flex flex-column">
+                                        <div class="h1-footer__widget-social">
+                                            <p>FOLLOW US</p>
+                                            <ul>
+                                                <li><a href="https://www.instagram.com/roji_ardiansyah/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                                <li><a href="https://www.tiktok.com/@roji_ardiansyah" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                                                <li><a href="https://www.linkedin.com/in/roji-ardiansyah-82189b233" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                                <li><a href="mailto:roji.ardiansyah@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- start copy right section -->
+                            <div
+                                class="h1-copyright__area text-center py-lg-5 py-3 bg-light  rounded-bottom-0 rounded-top-5">
+                                <p>Copyright © 2026 Roji Ardiansyah. Seluruh hak cipta dilindungi.</p>
+                            </div>
+                        </div>
+                    </section>
+                </footer>
+                <!-- Footer area end -->
+            </div>
+        </div>
+    </div>
+    <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
+
+
+
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/vendor/chroma.min.js"></script>
+    <script src="assets/js/plugins/waypoints.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/meanmenu.min.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+    <script src="assets/js/plugins/gsap.js"></script>
+    <script src="assets/js/plugins/ScrollSmoother.js"></script>
+    <script src="assets/js/plugins/ScrollToPlugin.js"></script>
+    <script src="assets/js/plugins/ScrollTrigger.js"></script>
+    <script src="assets/js/plugins/SplitText.js"></script>
+    <script src="assets/js/plugins/wow.js"></script>
+    <script src="assets/js/vendor/magnific-popup.min.js"></script>
+    <script src="assets/js/vendor/type.js"></script>
+    <script src="assets/js/vendor/vanilla-tilt.js"></script>
+    <script src="assets/js/plugins/nice-select.min.js"></script>
+    <script src="assets/js/vendor/odometer.min.js"></script>
+    <script src="assets/js/vendor/jarallax.min.js"></script>
+    <script src="assets/js/vendor/jquery-ui.min.js"></script>
+    <script src="assets/js/vendor/jquery.counterup.min.js"></script>
+    <script src="assets/js/plugins/parallax-scroll.js"></script>
+    <script src="assets/js/plugins/jquery.countdown.min.js"></script>
+    <script src="assets/js/plugins/isotope-docs.min.js"></script>
+    <script src="assets/js/vendor/ajax-form.js"></script>
+    <script src="assets/js/plugins/throwable.js"></script>
+    <script src="assets/js/plugins/matter.js"></script>
+    <script src="assets/js/plugins/magiccursor.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        /* === Roji: Spotlight grid karya + init tilt === */
+        document.addEventListener('mousemove', function (e) {
+            document.querySelectorAll('.h1-project__item-thumb').forEach(function (card) {
+                var r = card.getBoundingClientRect();
+                card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+                card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+            });
+        });
+        if (window.VanillaTilt) { VanillaTilt.init(document.querySelectorAll('[data-tilt]')); }
+    </script>
+</body>
+
+</html>
